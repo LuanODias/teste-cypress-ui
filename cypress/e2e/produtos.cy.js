@@ -35,4 +35,8 @@ describe('Funcionalidade página de produtos', () => {
         cy.get('.woocommerce-message').should('contain', quantidade +' × “Aether Gym Pant” foram adicionados no seu carrinho.')
 
     });
+
+    it('Deve adicionar produtos ao carrinho - Usando comando customizado', () => {
+        cy.addProdutos('Aether Gym Pant', 2)
+    });
 })
